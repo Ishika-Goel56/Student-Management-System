@@ -138,18 +138,6 @@ http://localhost:8080
 
 ---
 
-## 🚀 Future Enhancements
-
-- User authentication and authorization
-- Role-based access control
-- Student search and filtering
-- Pagination
-- File upload for student profile pictures
-- Email notifications
-- Dashboard with analytics
-
----
-
 ## 👩‍💻 Author
 
 **Ishika Goel**

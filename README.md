@@ -24,7 +24,6 @@ user-friendly interface.
 - CSS3
 - JavaScript
 - Axios
-- Bootstrap
 
 ### Backend
 - Java 17

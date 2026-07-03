@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("https://student-management-system-production-31a0.up.railway.app/students")
 public class stController {
 
 //   StudentService studentService = new StudentServiceImpl();

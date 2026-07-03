@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@CrossOrigin("https://student-management-system-production-31a0.up.railway.app/students")
+@CrossOrigin(origins="https://vercel.com/ishika-goel/student-management-system")
 public class stController {
 
 //   StudentService studentService = new StudentServiceImpl();

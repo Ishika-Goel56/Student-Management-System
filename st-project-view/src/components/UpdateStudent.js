@@ -21,7 +21,7 @@ const UpdateStudent = () => {
     useEffect(() => {
         const fetchData = async () =>{
             try{
-                const response = await StudentService.getStudentById(student.id);
+                const response = await StudentService.getStudentById(id);
                 setStudent(response.data);
             }catch(error){
                 console.log(error);

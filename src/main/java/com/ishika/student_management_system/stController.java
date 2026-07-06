@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins={"http://localhost:3000",
-        "https://student-management-system-an1ri56um-ishika-goel.vercel.app"
+        "https://student-management-system-lime-eta.vercel.app"
 })
 public class stController {
 

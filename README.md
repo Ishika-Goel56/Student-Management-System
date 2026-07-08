@@ -46,7 +46,7 @@ A full-stack **Student Management System** built using **Spring Boot, React.js, 
 - Maven
 
 ### Database
-- PostgreSQL (Neon)
+- PostgreSQL 
 
 ### Deployment
 - Vercel (Frontend)
@@ -124,7 +124,7 @@ npm start
 
 ## 🗄️ Database
 
-This project uses **Neon PostgreSQL** as the cloud database.
+This project uses **PostgreSQL** as the cloud database.
 
 Hibernate automatically creates and updates the database schema using:
 

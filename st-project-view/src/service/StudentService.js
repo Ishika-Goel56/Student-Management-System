@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const STUDENT_S_API_BASE_URL = "https://student-management-system-production-31a0.up.railway.app/students"
+const STUDENT_S_API_BASE_URL = "https://student-management-system-ja95.onrender.com/students"
 class StudentService{
     saveStudent(student){
         return axios.post(STUDENT_S_API_BASE_URL, student)

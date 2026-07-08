@@ -1,18 +1,27 @@
 # 🎓 Student Management System
 
-A full-stack Student Management System built using **Java, Spring Boot, React, and MySQL**.
-This application allows users to perform CRUD (Create, Read, Update, Delete) operations on student records through a responsive and 
-user-friendly interface.
+A full-stack **Student Management System** built using **Spring Boot, React.js, and PostgreSQL**. The application provides a simple and responsive interface to manage student records with complete CRUD (Create, Read, Update, Delete) functionality through REST APIs.
+
+## 🚀 Live Demo
+
+🌐 **Frontend:** https://student-management-system-lime-eta.vercel.app
+
+⚙️ **Backend API:** https://student-management-system-ja95.onrender.com
+
+---
 
 ## 📌 Features
 
-- ➕ Add a new student
+- ➕ Add new students
 - 📋 View all students
-- ✏️ Update student details
-- 🗑️ Delete student records
-- 🔍 Search and manage student information
-- 🌐 RESTful API integration
-- 💻 Responsive user interface
+- ✏️ Update student information
+- 🗑️ Delete students
+- 🔍 Fetch student by ID
+- 🌐 RESTful API architecture
+- 📱 Responsive React UI
+- ☁️ Cloud deployment with Vercel & Render
+- 🗄️ PostgreSQL database hosted on Neon
+- 🔒 Secure configuration using Environment Variables
 
 ---
 
@@ -20,120 +29,122 @@ user-friendly interface.
 
 ### Frontend
 - React.js
+- JavaScript
 - HTML5
 - CSS3
-- JavaScript
 - Axios
 
 ### Backend
-- Java 17
+- Java
 - Spring Boot
-- Spring Data JPA
-- Hibernate
+- Spring Data JPA (Hibernate)
+- REST APIs
 - Maven
 
 ### Database
-- MySQL
+- PostgreSQL (Neon)
 
-### Tools & Technologies
+### Deployment
+- Vercel (Frontend)
+- Render (Backend)
+
+### Tools
 - Git
 - GitHub
 - IntelliJ IDEA
 - Postman
 
+---
+
 ## 📂 Project Structure
 
 ```
-student-management-system/
+student-management-system
 │
-├── src/                    # Spring Boot Backend
-├── st-project-view/        # React Frontend
+├── src/                     # Spring Boot Backend
+├── st-project-view/         # React Frontend
 ├── pom.xml
+├── Dockerfile
 ├── mvnw
-├── mvnw.cmd
-├── test.http
-└── README.md
-```
-
-## ⚙️ Installation & Setup
-
-### Clone the repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/student-management-system.git
-```
-
-### Backend Setup
-
-1. Open the project in IntelliJ IDEA or Eclipse.
-2. Configure MySQL in `application.properties`.
-
-Example:
-
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/studentdb
-spring.datasource.username=YOUR-USERNAME
-spring.datasource.password=YOUR_PASSWORD
-spring.jpa.hibernate.ddl-auto=update
-```
-
-3. Run the Spring Boot application.
-
----
-
-### Frontend Setup
-
-Navigate to the React project:
-
-```bash
-cd st-project-view
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run the application:
-
-```bash
-npm start
-```
-
-Frontend URL:
-
-```
-http://localhost:3000
-```
-
-Backend URL:
-
-```
-http://localhost:8080
+├── README.md
 ```
 
 ---
 
-## 🔗 API Endpoints
+## 📡 REST API Endpoints
 
 | Method | Endpoint | Description |
 |---------|----------|-------------|
-| GET | `/students` | Get all students |
-| GET | `/students/{id}` | Get student by ID |
-| POST | `/students` | Add a new student |
-| PUT | `/students/{id}` | Update student |
-| DELETE | `/students/{id}` | Delete student |
+| GET | /students | Get all students |
+| GET | /students/{id} | Get student by ID |
+| POST | /students | Add a student |
+| PUT | /students/{id} | Update a student |
+| DELETE | /students/{id} | Delete a student |
 
 ---
 
-## 🎯 Learning Outcomes
+## ⚙️ Backend Setup
 
-- Developed a full-stack web application using Spring Boot and React.
-- Implemented REST APIs for CRUD operations.
-- Integrated MySQL with Spring Data JPA.
-- Connected frontend and backend using Axios.
-- Practiced version control using Git and GitHub.
+### Clone Repository
+
+```bash
+git clone https://github.com/Ishika-Goel56/Student-Management-System.git
+
+cd Student-Management-System
+```
+
+### Configure Environment Variables
+
+Create the following environment variables:
+
+```properties
+SPRING_DATASOURCE_URL=your_database_url
+
+SPRING_DATASOURCE_USERNAME=your_username
+
+SPRING_DATASOURCE_PASSWORD=your_password
+```
+
+### Run Spring Boot
+
+```bash
+./mvnw spring-boot:run
+```
+
+---
+
+## 💻 Frontend Setup
+
+```bash
+cd st-project-view
+
+npm install
+
+npm start
+```
+
+---
+
+## 🗄️ Database
+
+This project uses **Neon PostgreSQL** as the cloud database.
+
+Hibernate automatically creates and updates the database schema using:
+
+```properties
+spring.jpa.hibernate.ddl-auto=update
+```
+
+---
+
+## 📷 Screenshots
+
+You can add screenshots of:
+
+- Home Page
+- Add Student
+- Edit Student
+- Student List
 
 ---
 
@@ -145,4 +156,7 @@ GitHub: https://github.com/Ishika-Goel56
 
 ---
 
-⭐ If you found this project helpful, consider giving it a star!
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
+

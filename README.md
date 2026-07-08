@@ -124,7 +124,7 @@ npm start
 
 ## 🗄️ Database
 
-This project uses **PostgreSQL** as the cloud database.
+This project uses **Neon PostgreSQL** as the cloud database.
 
 Hibernate automatically creates and updates the database schema using:
 

@@ -2,11 +2,13 @@
 
 A full-stack **Student Management System** built using **Spring Boot, React.js, and PostgreSQL**. The application provides a simple and responsive interface to manage student records with complete CRUD (Create, Read, Update, Delete) functionality through REST APIs.
 
+
 ## 🚀 Live Demo
 
 🌐 **Frontend:** https://student-management-system-lime-eta.vercel.app
 
 ⚙️ **Backend API:** https://student-management-system-ja95.onrender.com
+
 
 
 ## 📌 Features
@@ -21,6 +23,7 @@ A full-stack **Student Management System** built using **Spring Boot, React.js, 
 - ☁️ Cloud deployment with Vercel & Render
 - 🗄️ PostgreSQL database hosted on Neon
 - 🔒 Secure configuration using Environment Variables
+
 
 
 ## 🛠️ Tech Stack

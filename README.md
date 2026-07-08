@@ -8,7 +8,6 @@ A full-stack **Student Management System** built using **Spring Boot, React.js, 
 
 ⚙️ **Backend API:** https://student-management-system-ja95.onrender.com
 
----
 
 ## 📌 Features
 
@@ -134,19 +133,6 @@ Hibernate automatically creates and updates the database schema using:
 ```properties
 spring.jpa.hibernate.ddl-auto=update
 ```
-
----
-
-## 📷 Screenshots
-
-You can add screenshots of:
-
-- Home Page
-- Add Student
-- Edit Student
-- Student List
-
----
 
 ## 👩‍💻 Author
 

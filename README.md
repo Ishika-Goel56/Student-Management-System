@@ -22,7 +22,6 @@ A full-stack **Student Management System** built using **Spring Boot, React.js, 
 - 🗄️ PostgreSQL database hosted on Neon
 - 🔒 Secure configuration using Environment Variables
 
----
 
 ## 🛠️ Tech Stack
 
@@ -53,7 +52,6 @@ A full-stack **Student Management System** built using **Spring Boot, React.js, 
 - IntelliJ IDEA
 - Postman
 
----
 
 ## 📂 Project Structure
 
@@ -68,7 +66,6 @@ student-management-system
 ├── README.md
 ```
 
----
 
 ## 📡 REST API Endpoints
 
@@ -80,7 +77,6 @@ student-management-system
 | PUT | /students/{id} | Update a student |
 | DELETE | /students/{id} | Delete a student |
 
----
 
 ## ⚙️ Backend Setup
 
@@ -110,8 +106,6 @@ SPRING_DATASOURCE_PASSWORD=your_password
 ./mvnw spring-boot:run
 ```
 
----
-
 ## 💻 Frontend Setup
 
 ```bash
@@ -121,8 +115,6 @@ npm install
 
 npm start
 ```
-
----
 
 ## 🗄️ Database
 
@@ -140,7 +132,6 @@ spring.jpa.hibernate.ddl-auto=update
 
 GitHub: https://github.com/Ishika-Goel56
 
----
 
 ## ⭐ Support
 

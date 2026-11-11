@@ -1,6 +1,7 @@
 package com.ishika.student_management_system;
 
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,19 +19,41 @@ public class stController {
     @Autowired
     StudentService studentService;
 
-    @GetMapping("students")
-        public List<Student> getAllStudents(){
+    @GetMapping("students/page")
+    public PageResponse getStudentsByPage(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "5") int size,
+            @RequestParam(defaultValue = "id") String sortBy,
+            @RequestParam(defaultValue = "asc") String direction) {
 
-        return studentService.readStudents();
+        if (page < 0) {
+            throw new IllegalArgumentException(
+                    "Page number cannot be negative");
+        }
+        if (size <= 0) {
+            throw new IllegalArgumentException(
+                    "Page size must be greater than 0");
+        }
+        return studentService.readStudents(
+                page, size, sortBy, direction);
     }
+
+    @GetMapping("students")
+    public List<StudentResponseDTO> getAllStudents(
+            @RequestParam(defaultValue = "id") String sortBy,
+            @RequestParam(defaultValue = "asc") String direction) {
+
+        return studentService.readStudents(sortBy, direction);
+    }
+
     @GetMapping("students/{id}")
-    public Student getStudentsById(@PathVariable Long id){
+    public StudentResponseDTO getStudentsById(@PathVariable Long id){
         System.out.println("Yes");
         return studentService.readStudent(id);
     }
 
     @PostMapping("students")
-        public String createStudent(@RequestBody Student student){
+        public String createStudent(@Valid @RequestBody StudentRequestDTO student){
 //        students.add(student);
        return studentService.createStudent(student);
     }
@@ -41,7 +64,11 @@ public class stController {
         return "Not Found";
     }
     @PutMapping("students/{id}")
-    public String putMethodName(@PathVariable Long id, @RequestBody Student student) {
+    public String putMethodName(@PathVariable Long id, @Valid @RequestBody Student student) {
         return studentService.updateStudent(id, student);
+    }
+    @GetMapping("students/search")
+    public List<StudentResponseDTO> searchStudents(@RequestParam String name) {
+        return studentService.searchStudents(name);
     }
 }

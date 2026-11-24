@@ -6,7 +6,6 @@ A full-stack Student Management System built using **React.js, Spring Boot, and 
 
 - **Frontend:** https://student-management-system-lime-eta.vercel.app/
 - **Backend:** https://student-management-system-api-mwmx.onrender.com
-- **GitHub Repository:** https://github.com/Ishika-Goel56/Student-Management-System
 
 ## Features
 

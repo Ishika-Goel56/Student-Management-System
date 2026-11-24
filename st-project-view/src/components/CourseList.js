@@ -8,7 +8,7 @@ const CourseList = () => {
 
     const fetchCourses = async () => {
         try {
-            const response = await fetch("http://localhost:8080/courses");
+            const response = await fetch("https://student-management-system-api-mwmx.onrender.com/courses");
 
             if (!response.ok) {
                 throw new Error("Failed to fetch courses");
@@ -39,7 +39,7 @@ const CourseList = () => {
 
         try {
             const response = await fetch(
-                `http://localhost:8080/courses/${id}`,
+                `https://student-management-system-api-mwmx.onrender.com/courses/${id}`,
                 { method: "DELETE" }
             );
 

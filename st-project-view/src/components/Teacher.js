@@ -11,7 +11,7 @@ const Teacher = () => {
             setLoading(true);
 
             try {
-                const response = await fetch("http://localhost:8080/teachers");
+                const response = await fetch("https://student-management-system-api-mwmx.onrender.com/teachers");
 
                 if (!response.ok) {
                     throw new Error("Failed to fetch teachers");
@@ -34,7 +34,7 @@ const Teacher = () => {
 
         try {
             const response = await fetch(
-                `http://localhost:8080/teachers/${id}`,
+                `https://student-management-system-api-mwmx.onrender.com/teachers/${id}`,
                 { method: "DELETE" }
             );
 

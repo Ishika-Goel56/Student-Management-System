@@ -18,7 +18,7 @@ const UpdateTeacher = () => {
         const fetchTeacher = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:8080/teachers/${id}`
+                    `https://student-management-system-api-mwmx.onrender.com/teachers/${id}`
                 );
 
                 if (!response.ok) {
@@ -58,7 +58,7 @@ const UpdateTeacher = () => {
 
         try {
             const response = await fetch(
-                `http://localhost:8080/teachers/${id}`,
+                `https://student-management-system-api-mwmx.onrender.com/teachers/${id}`,
                 {
                     method: "PUT",
                     headers: {

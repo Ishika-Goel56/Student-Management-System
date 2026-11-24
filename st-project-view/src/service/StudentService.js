@@ -1,25 +1,26 @@
 import axios from 'axios'
 
-const STUDENT_S_API_BASE_URL = "http://localhost:8080/students"
-class StudentService{
-    saveStudent(student){
+const STUDENT_S_API_BASE_URL = "https://student-management-system-api-mwmx.onrender.com/students"
+
+class StudentService {
+    saveStudent(student) {
         return axios.post(STUDENT_S_API_BASE_URL, student)
     }
 
-    getStudents(){
+    getStudents() {
         return axios.get(STUDENT_S_API_BASE_URL)
     }
 
-    getStudentById(id){
-        return axios.get(STUDENT_S_API_BASE_URL+"/"+id)
+    getStudentById(id) {
+        return axios.get(STUDENT_S_API_BASE_URL + "/" + id)
     }
 
-    deleteStudentById(id){
-        return axios.delete(STUDENT_S_API_BASE_URL+"/"+id)
+    deleteStudentById(id) {
+        return axios.delete(STUDENT_S_API_BASE_URL + "/" + id)
     }
 
-    updateStudent(student, id){
-        return axios.put(STUDENT_S_API_BASE_URL+"/"+id, student)
+    updateStudent(student, id) {
+        return axios.put(STUDENT_S_API_BASE_URL + "/" + id, student)
     }
 }
 

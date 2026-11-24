@@ -53,7 +53,7 @@ const AddTeacher = () => {
         setIsSaving(true);
 
         try {
-            const response = await fetch("http://localhost:8080/teachers", {
+            const response = await fetch("https://student-management-system-api-mwmx.onrender.com/teachers", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

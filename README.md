@@ -1,145 +1,219 @@
-# 🎓 Student Management System
+# Student Management System
 
-A full-stack **Student Management System** built using **Spring Boot, React.js, and PostgreSQL**. The application provides a simple and responsive interface to manage student records with complete CRUD (Create, Read, Update, Delete) functionality through REST APIs.
+A full-stack Student Management System built using **React.js, Spring Boot, and PostgreSQL**. This application allows users to manage student, teacher, and course records through a simple and responsive interface.
 
+## Live Demo
 
+- **Frontend:** https://student-management-system-lime-eta.vercel.app/
+- **Backend:** https://student-management-system-api-mwmx.onrender.com
+- **GitHub Repository:** https://github.com/Ishika-Goel56/Student-Management-System
 
+## Features
 
-## 🚀 Live Demo
+### Student Management
+- Add new students
+- View all students
+- Update student details
+- Delete student records
+- Pagination and sorting support
 
-🌐 **Frontend:** https://student-management-system-lime-eta.vercel.app
+### Teacher Management
+- Add new teachers
+- View teacher records
+- Update teacher details
+- Delete teacher records
 
-⚙️ **Backend API:** https://student-management-system-ja95.onrender.com
+### Course Management
+- Add new courses
+- View course records
+- Update course details
+- Delete course records
 
+### Backend Features
+- RESTful APIs using Spring Boot
+- CRUD operations for all modules
+- DTO-based data handling
+- Input validation using Jakarta Validation
+- Global exception handling
+- Custom Resource Not Found Exception
+- PostgreSQL database integration
 
+## Technology Stack
 
+| Category | Technologies |
+|---|---|
+| Frontend | React.js, JavaScript, HTML, CSS |
+| Backend | Java 17, Spring Boot |
+| Database | PostgreSQL |
+| API Communication | REST APIs, Axios, Fetch API |
+| ORM | Spring Data JPA, Hibernate |
+| Build Tool | Maven |
+| Deployment | Vercel, Render |
+| Database Hosting | Neon PostgreSQL |
+| Version Control | Git, GitHub |
 
-## 📌 Features
+## Project Structure
 
-- ➕ Add new students
-- 📋 View all students
-- ✏️ Update student information
-- 🗑️ Delete students
-- 🔍 Fetch student by ID
-- 🌐 RESTful API architecture
-- 📱 Responsive React UI
-- ☁️ Cloud deployment with Vercel & Render
-- 🗄️ PostgreSQL database hosted on Neon
-- 🔒 Secure configuration using Environment Variables
-
-
-
-## 🛠️ Tech Stack
-
-### Frontend
-- React.js
-- JavaScript
-- HTML5
-- CSS3
-- Axios
-
-### Backend
-- Java
-- Spring Boot
-- Spring Data JPA (Hibernate)
-- REST APIs
-- Maven
-
-### Database
-- PostgreSQL 
-
-### Deployment
-- Vercel (Frontend)
-- Render (Backend)
-
-### Tools
-- Git
-- GitHub
-- IntelliJ IDEA
-- Postman
-
-
-## 📂 Project Structure
-
-```
-student-management-system
+```text
+Student-Management-System/
 │
-├── src/                     # Spring Boot Backend
-├── st-project-view/         # React Frontend
-├── pom.xml
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/ishika/student_management_system/
+│       │       ├── controller/
+│       │       ├── service/
+│       │       ├── repository/
+│       │       ├── entity/
+│       │       ├── dto/
+│       │       └── exception/
+│       │
+│       └── resources/
+│           └── application.properties
+│
+├── st-project-view/
+│   ├── public/
+│   ├── src/
+│   └── package.json
+│
 ├── Dockerfile
-├── mvnw
-├── README.md
+├── settings.xml
+├── pom.xml
+└── README.md
 ```
 
+## REST API Endpoints
 
-## 📡 REST API Endpoints
+Base URL:
+
+```text
+https://student-management-system-api-mwmx.onrender.com
+```
+
+### Student APIs
 
 | Method | Endpoint | Description |
-|---------|----------|-------------|
-| GET | /students | Get all students |
-| GET | /students/{id} | Get student by ID |
-| POST | /students | Add a student |
-| PUT | /students/{id} | Update a student |
-| DELETE | /students/{id} | Delete a student |
+|---|---|---|
+| GET | `/students` | Get all students |
+| POST | `/students` | Add a student |
+| PUT | `/students/{id}` | Update a student |
+| DELETE | `/students/{id}` | Delete a student |
+| GET | `/students/page` | Get paginated students |
 
+### Teacher APIs
 
-## ⚙️ Backend Setup
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/teachers` | Get all teachers |
+| POST | `/teachers` | Add a teacher |
+| PUT | `/teachers/{id}` | Update a teacher |
+| DELETE | `/teachers/{id}` | Delete a teacher |
 
-### Clone Repository
+### Course APIs
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/courses` | Get all courses |
+| POST | `/courses` | Add a course |
+| PUT | `/courses/{id}` | Update a course |
+| DELETE | `/courses/{id}` | Delete a course |
+
+## Getting Started
+
+Follow these steps to run the project locally.
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Ishika-Goel56/Student-Management-System.git
+```
 
+```bash
 cd Student-Management-System
 ```
 
-### Configure Environment Variables
+### 2. Backend Setup
 
-Create the following environment variables:
+Open the project in IntelliJ IDEA.
 
-```properties
-SPRING_DATASOURCE_URL=your_database_url
+Configure your PostgreSQL database credentials using environment variables:
 
-SPRING_DATASOURCE_USERNAME=your_username
-
-SPRING_DATASOURCE_PASSWORD=your_password
+```text
+SPRING_DATASOURCE_URL
+SPRING_DATASOURCE_USERNAME
+SPRING_DATASOURCE_PASSWORD
 ```
 
-### Run Spring Boot
+Run the Spring Boot application:
 
 ```bash
-./mvnw spring-boot:run
+mvn spring-boot:run
 ```
 
-## 💻 Frontend Setup
+Backend will run at:
+
+```text
+http://localhost:8080
+```
+
+### 3. Frontend Setup
+
+Open a terminal and navigate to the frontend directory:
 
 ```bash
 cd st-project-view
+```
 
+Install dependencies:
+
+```bash
 npm install
+```
 
+Start the React application:
+
+```bash
 npm start
 ```
 
-## 🗄️ Database
+Frontend will run at:
 
-This project uses **Neon PostgreSQL** as the cloud database.
-
-Hibernate automatically creates and updates the database schema using:
-
-```properties
-spring.jpa.hibernate.ddl-auto=update
+```text
+http://localhost:3000
 ```
 
-## 👩‍💻 Author
+**Note:** For local development, configure the frontend API URLs to use `http://localhost:8080` instead of the deployed backend URL.
+
+## Deployment
+
+The application is deployed using:
+
+- **Frontend:** Vercel
+- **Backend:** Render (Docker deployment)
+- **Database:** Neon PostgreSQL
+
+The React frontend communicates with the deployed Spring Boot backend through REST APIs. The backend connects to the Neon PostgreSQL database using environment variables.
+
+## Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+- Building RESTful APIs using Spring Boot.
+- Developing frontend applications using React.js.
+- Performing CRUD operations.
+- Connecting React with Spring Boot.
+- Integrating PostgreSQL using Spring Data JPA.
+- Implementing validation and exception handling.
+- Working with Git and GitHub.
+- Deploying a full-stack application using Vercel, Render, and Neon.
+
+## Author
 
 **Ishika Goel**
 
-GitHub: https://github.com/Ishika-Goel56
+- GitHub: https://github.com/Ishika-Goel56
 
+---
 
-## ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub.
+If you find this project useful, feel free to explore the repository!
 
